@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iglesia - Juli & Ariel</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root { --blue: #2a3d63; --dark: #1a263d; --gold-l: #f7e08a; --ivory: #fdfbf7; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Montserrat', sans-serif; background-color: var(--blue); color: var(--ivory); height: 100vh; display: flex; flex-direction: column; }
+        .font-serif { font-family: 'Playfair Display', serif; }
+
+        nav { padding: 30px; width: 100%; display: flex; justify-content: space-between; align-items: center; }
+        nav a { color: var(--gold-l); text-decoration: none; font-size: 11px; text-transform: uppercase; font-weight: bold; letter-spacing: 2px; }
+
+        .content { flex-grow: 1; display: flex; align-items: center; justify-content: center; padding: 20px; }
+        .box { 
+            background: rgba(26, 38, 61, 0.5); 
+            padding: 50px 30px; 
+            border-radius: 40px; 
+            text-align: center; 
+            border: 1px solid rgba(212,175,55,0.2); 
+            max-width: 600px; 
+        }
+        .back-btn { margin-top: 30px; display: inline-block; color: white; text-decoration: underline; font-size: 0.8rem; opacity: 0.6; }
+
+        @media (min-width: 1024px) {
+            .box { padding: 80px; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html">← Atrás</a>
+        <div class="font-serif" style="color: white; font-weight: bold;">J & A</div>
+    </nav>
+
+    <div class="content">
+        <div class="box">
+            <span style="font-size: 10px; letter-spacing: 5px; color: var(--gold-l); text-transform: uppercase; display: block; margin-bottom: 20px;">Ceremonia Religiosa</span>
+            <h2 class="font-serif" style="font-size: 2.2rem; font-style: italic; line-height: 1.2;">Próximamente habrá información sobre la iglesia.</h2>
+            <div style="width: 50px; height: 1px; background: var(--gold-l); margin: 30px auto;"></div>
+            <p style="opacity: 0.7; font-style: italic;">Estamos ultimando detalles para compartir el lugar de nuestra unión espiritual.</p>
+            <a href="index.html" class="back-btn">Volver al inicio</a>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fiesta - Juli & Ariel</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --wedding-blue: #2a3d63;
+            --wedding-blue-dark: #1a263d;
+            --wedding-ivory: #fdfbf7;
+            --wedding-gold: #d4af37;
+            --wedding-gold-light: #f7e08a;
+        }
+
+        /* RESET & BASE */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Montserrat', sans-serif; 
+            background-color: var(--wedding-blue); 
+            color: var(--wedding-ivory); 
+            text-align: center; 
+            line-height: 1.6;
+        }
+        .font-serif { font-family: 'Playfair Display', serif; }
+
+        /* NAVIGATION */
+        nav { 
+            background: #1e2c47; 
+            padding: 15px 25px; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            position: sticky; 
+            top: 0; 
+            z-index: 100;
+            border-bottom: 1px solid rgba(212,175,55,0.2);
+        }
+        .nav-back { color: white; font-size: 10px; font-weight: 700; text-decoration: none; text-transform: uppercase; letter-spacing: 2px; }
+        .nav-logo { font-size: 1.5rem; font-weight: 900; color: var(--wedding-gold-light); }
+
+        /* SECTIONS */
+        .container { padding: 40px 20px; max-width: 900px; margin: 0 auto; }
+        .section-card { 
+            background: #1e2c47; 
+            padding: 40px 20px; 
+            border-radius: 40px; 
+            margin-bottom: 60px; 
+            border: 1px solid rgba(212,175,55,0.2);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+
+        /* CALENDARIO */
+        .calendar-box { background: var(--wedding-blue-dark); padding: 30px 20px; border-radius: 30px; max-width: 350px; margin: 30px auto; border: 1px solid rgba(212,175,55,0.3); }
+        .calendar-grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 5px; margin-top: 20px; }
+        .cal-header { color: var(--wedding-gold); font-size: 11px; font-weight: 800; padding-bottom: 10px; }
+        .cal-day { font-size: 14px; padding: 8px 0; border-radius: 50%; color: rgba(255,255,255,0.7); }
+        .cal-day.active { background: white; color: var(--wedding-blue-dark); font-weight: 900; border: 2px solid var(--wedding-gold); transform: scale(1.1); }
+
+        /* BOTONES */
+        .btn-gold { 
+            background: linear-gradient(45deg, #b8860b, #d4af37, #f7e08a); 
+            color: var(--wedding-blue-dark); 
+            padding: 18px 30px; 
+            border-radius: 50px; 
+            font-weight: 800; 
+            display: inline-block; 
+            width: 100%; 
+            max-width: 300px; 
+            font-size: 11px; 
+            letter-spacing: 2px;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+        .btn-wa { background: #25D366; color: white; padding: 20px; border-radius: 20px; font-weight: 800; display: block; margin: 10px 0; font-size: 11px; text-decoration: none; text-transform: uppercase; }
+
+        /* TARJETA / CBU */
+        .price-tag { font-size: 3rem; font-weight: 900; color: var(--wedding-blue-dark); margin: 10px 0; }
+        .white-card { background: white; color: var(--wedding-blue-dark); padding: 35px 20px; border-radius: 35px; margin-top: 30px; }
+        .cbu-display { background: #f4f4f4; padding: 15px; border-radius: 12px; font-family: monospace; font-size: 1rem; margin: 20px 0; border: 1px solid #ddd; word-break: break-all; }
+
+        /* DRESS CODE */
+        .dress-code-title { font-size: 4rem; letter-spacing: 8px; font-weight: 300; margin: 20px 0; color: white; }
+
+        /* DESKTOP QUERIES */
+        @media (min-width: 1024px) {
+            .container { padding: 80px 0; }
+            .section-card { padding: 80px 40px; }
+            .wa-flex { display: flex; gap: 20px; justify-content: center; }
+            .wa-flex a { flex: 1; }
+            .dress-code-title { font-size: 7rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html" class="nav-back">← Inicio</a>
+        <div class="nav-logo font-serif">J & A</div>
+    </nav>
+
+    <div class="container">
+
+        <section class="section-card">
+            <h2 class="font-serif" style="font-size: 2.5rem; margin-bottom: 10px;">Agendá el gran día</h2>
+            <div class="calendar-box">
+                <h3 class="font-serif" style="font-size: 1.5rem; letter-spacing: 3px; margin-bottom: 20px; color: white;">Septiembre 2026</h3>
+                <div class="calendar-grid">
+                    <div class="cal-header">L</div><div class="cal-header">M</div><div class="cal-header">M</div><div class="cal-header">J</div><div class="cal-header">V</div><div class="cal-header">S</div><div class="cal-header">D</div>
+                    <div></div><div class="cal-day">1</div><div class="cal-day">2</div><div class="cal-day">3</div><div class="cal-day">4</div><div class="cal-day">5</div><div class="cal-day">6</div>
+                    <div class="cal-day">7</div><div class="cal-day">8</div><div class="cal-day">9</div><div class="cal-day">10</div><div class="cal-day">11</div><div class="cal-day">12</div><div class="cal-day">13</div>
+                    <div class="cal-day">14</div><div class="cal-day">15</div><div class="cal-day">16</div><div class="cal-day">17</div><div class="cal-day">18</div><div class="cal-day active">19</div><div class="cal-day">20</div>
+                    <div class="cal-day">21</div><div class="cal-day">22</div><div class="cal-day">23</div><div class="cal-day">24</div><div class="cal-day">25</div><div class="cal-day">26</div><div class="cal-day">27</div>
+                    <div class="cal-day">28</div><div class="cal-day">29</div><div class="cal-day">30</div>
+                </div>
+            </div>
+            <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Boda%20Juli%26Ariel" target="_blank" class="btn-gold">Agendar en Google</a>
+        </section>
+
+        <section class="section-card">
+            <h2 class="font-serif" style="font-size: 2.8rem; color: var(--wedding-gold-light);">Salón “Las Morenitas”</h2>
+            <p style="text-transform: uppercase; letter-spacing: 4px; font-size: 11px; margin: 15px 0; font-weight: 700;">Diagonal a Tafí Viejo — KM 2.5</p>
+            <a href="https://maps.google.com" target="_blank" class="btn-gold" style="background: var(--wedding-blue); color: white; border: 1px solid var(--wedding-gold);">Ver en Google Maps</a>
+        </section>
+
+        <section style="margin-bottom: 80px;">
+            <span style="color: var(--wedding-gold-light); letter-spacing: 5px; font-size: 11px; font-weight: 900; text-transform: uppercase;">Dress Code</span>
+            <h2 class="font-serif dress-code-title">FORMAL</h2>
+            <p style="font-size: 1.2rem; font-style: italic; max-width: 500px; margin: 0 auto;">
+                El blanco será exclusivo para la <span style="color: var(--wedding-gold-light); font-weight: 800;">novia</span> y el azul marino para el <span style="color: var(--wedding-gold-light); font-weight: 800;">novio</span>.
+            </p>
+        </section>
+
+        <section class="section-card" style="border-top: 8px solid var(--wedding-gold); background: var(--wedding-blue-dark);">
+            <h2 class="font-serif" style="font-size: 2.5rem; margin-bottom: 25px;">Información de Tarjeta</h2>
+            <div style="max-width: 600px; margin: 0 auto 30px;">
+                <p style="font-style: italic; font-size: 1.2rem; margin-bottom: 15px; color: var(--wedding-ivory);">
+                    "Queremos que compartas con nosotros uno de los momentos más especiales de nuestras vidas..."
+                </p>
+                <p style="font-weight: 600; font-size: 1.1rem; color: var(--wedding-gold-light);">
+                    El mejor regalo que nos podrías hacer es abonar tu propia tarjeta.
+                </p>
+            </div>
+            
+            <div class="white-card">
+                <span style="font-size: 10px; font-weight: 900; letter-spacing: 2px; color: #666;">VALOR POR PERSONA</span>
+                <div class="price-tag font-serif">$ 57.000</div>
+                <p style="font-size: 11px; color: #888; font-style: italic; margin-bottom: 25px;">Sujeto a actualización por inflación.</p>
+                
+                <div style="border-top: 1px solid #eee; padding-top: 20px;">
+                    <p style="font-weight: 700;">Abonar al CBU:</p>
+                    <div class="cbu-display">4530000800011102024863</div>
+                    <span style="font-size: 10px; font-weight: 800; color: #aaa;">TITULAR DE CUENTA</span>
+                    <p class="font-serif" style="font-size: 1.5rem; font-weight: 900; text-transform: uppercase;">Albarracín Julieta María</p>
+                </div>
+            </div>
+        </section>
+
+        <section style="margin-bottom: 80px; padding: 0 20px;">
+            <div style="font-size: 2rem; margin-bottom: 20px;">❦</div>
+            <h3 class="font-serif" style="font-size: 2.2rem; font-style: italic; margin-bottom: 20px;">Niños Invitados</h3>
+            <p style="font-style: italic; font-size: 1.1rem; opacity: 0.9; max-width: 600px; margin: 0 auto;">
+                Los niños invitados son bienvenidos, siempre que sean sus padres quienes asuman el <span style="color: var(--wedding-gold-light); text-decoration: underline;">cuidado responsable</span> de ellos.
+            </p>
+        </section>
+
+        <section class="section-card">
+            <h2 class="font-serif" style="font-size: 3rem; font-style: italic; margin-bottom: 10px;">¿Nos acompañas?</h2>
+            <p style="color: var(--wedding-gold-light); letter-spacing: 4px; font-size: 11px; font-weight: 900; margin-bottom: 40px; text-transform: uppercase;">Confirmar antes del 31 de Julio de 2026</p>
+            <div class="wa-flex">
+                <a href="https://wa.me/543816317289" target="_blank" class="btn-wa">Confirmar con Juli</a>
+                <a href="https://wa.me/543813650704" target="_blank" class="btn-wa">Confirmar con Ariel</a>
+            </div>
+        </section>
+
+    </div>
+
+    <footer style="padding: 60px; background: var(--wedding-blue-dark); font-size: 10px; letter-spacing: 10px; opacity: 0.3; font-weight: 900;">
+        JULIETA & ARIEL — 2026
+    </footer>
+
+</body>
+</html>
